@@ -8,8 +8,9 @@
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="logo" class="logo">
         <nav>
-            <a href="login.html" id="login-link">Login</a>
+            <a href="login.html" id="login-link" class="login-button">Login</a>
         </nav>
     </header>
     <main>
@@ -20,9 +21,18 @@
             </select>
         </section>
         <section id="places-list">
-            <!-- List of places will be populated dynamically -->
+            <ul class="place-card"><!--you need to use DOM to populate-->
+                <li><img src="" alt=""><p>name</p><p>price per night</p><p>location</p><p>view detail button</p>place holder</li>
+                <li><img src="" alt=""><p>name</p><p>price per night</p><p>location</p><p>view detail button</p>place holder2</li>
+                <li><img src="" alt=""><p>name</p><p>price per night</p><p>location</p><p>view detail button</p>place holder3</li>
+            </ul>
         </section>
     </main>
+    <div>
+    <footer>
+        <p>&copy; 2024 HBnB Evolution. All rights reserved.</p>
+    </footer>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
