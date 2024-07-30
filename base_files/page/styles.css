@@ -1,0 +1,126 @@
+/*
+  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks.
+  You'll probably need to override some of theese styles.
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ebbb0e;
+    color: #fff;
+    padding: 1rem;
+}
+footer {
+    background-color: #ebbb0e;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 25px;
+}
+footer p {
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+.logo {
+    float: left;
+}
+main {
+    padding: 2rem;
+}
+.place-card, .review-card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+ul {
+    margin: 0 auto;
+    text-align: center;
+}
+.pcard {
+    display: inline-grid;
+    vertical-align: top;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Center the grid container */
+    max-width: 1200px; /* Optional: Set a max-width to constrain the grid */
+    display: flex;
+    justify-content: center;
+}
+
+.place-card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    height: 210px
+}
+
+ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pcard {
+    display: inline-grid;
+    vertical-align: top;
+}
+
+.place-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.pcard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.pcard h2, .pcard p, .pcard button {
+    margin: 8px 0;
+}
+#filter {
+    text-align: center;
+}
+.parent-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.details-button {
+    background-color: #e3eb0e;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+}

@@ -8,24 +8,51 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="logo" class="logo">
+        <img src="images/logo.png" alt="logo" class="logo">
         <nav>
             <a href="login.html" id="login-link" class="login-button">Login</a>
         </nav>
     </header>
     <main>
         <section id="filter">
+            <h2>Available Places</h2>
             <label for="country-filter">Filter by Country:</label>
             <select id="country-filter">
                 <!-- Options will be populated dynamically -->
             </select>
         </section>
         <section id="places-list">
-            <ul class="place-card"><!--you need to use DOM to populate-->
-                <li><img src="" alt=""><p>name</p><p>price per night</p><p>location</p><p>view detail button</p>place holder</li>
-                <li><img src="" alt=""><p>name</p><p>price per night</p><p>location</p><p>view detail button</p>place holder2</li>
-                <li><img src="" alt=""><p>name</p><p>price per night</p><p>location</p><p>view detail button</p>place holder3</li>
+            <div class="parent-container">
+            <ul class="grid-container"><!--you need to use DOM to populate-->
+                <div class="place-card">
+                    <li class="pcard">
+                        <img src="images/" alt="">
+                        <h2>name</h2>
+                        <p>Price per night:</p>
+                        <p>location</p>
+                        <button type="button" class="details-button">View Details</button>
+                    </li>
+                </div>
+                <div class="place-card">
+                    <li class="pcard">
+                        <img src="images/" alt="">
+                        <h2>name</h2>
+                        <p>Price per night:</p>
+                        <p>location</p>
+                        <button type="button" class="details-button">View Details</button>
+                    </li>
+                </div>
+                <div class="place-card">
+                    <li class="pcard">
+                        <img src="images/" alt="">
+                        <h2>name</h2>
+                        <p>Price per night:</p>
+                        <p>location</p>
+                        <button type="button" class="details-button">View Details</button>
+                    </li>
+                </div>
             </ul>
+        </div>
         </section>
     </main>
     <div>
@@ -33,6 +60,6 @@
         <p>&copy; 2024 HBnB Evolution. All rights reserved.</p>
     </footer>
     </div>
-    <script src="scripts.js"></script>
+    <script src="/base_files/script/script.js"></script>
 </body>
 </html>
