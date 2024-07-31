@@ -11,10 +11,10 @@ app.config.from_object('config.Config')
 jwt = JWTManager(app)
 CORS(app) # Enable CORS for all routes
 
-with open('mock-api/data/users.json') as f:
+with open('base_files/mock-api/data/users.json') as f:
     users = json.load(f)
 
-with open('mock-api/data/places.json') as f:
+with open('base_files/mock-api/data/places.json') as f:
     places = json.load(f)
 
 # In-memory storage for new reviews
