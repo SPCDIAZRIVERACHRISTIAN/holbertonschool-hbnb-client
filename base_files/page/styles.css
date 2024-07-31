@@ -29,6 +29,7 @@ footer {
 }
 footer p {
     text-align: center;
+    color: #fff;
 }
 nav {
     display: flex;
@@ -67,7 +68,7 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0 auto; /* Center the grid container */
-    max-width: 1200px; /* Optional: Set a max-width to constrain the grid */
+    max-width: 1200px;  /*Optional: Set a max-width to constrain the grid */
     display: flex;
     justify-content: center;
 }
@@ -78,7 +79,7 @@ ul {
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 300px;
-    height: 210px
+    height: 210px;
 }
 
 ul {
@@ -123,4 +124,19 @@ ul {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 8px;
+}
+.review-card {
+        list-style-type: none;
+        text-align: left;
+}
+.place-info {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#place-details h2 {
+    text-align: center;
 }
