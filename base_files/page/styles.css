@@ -7,12 +7,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Proxima Nova, sans-serif;
 }
 
 body {
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
 }
 
 header {
@@ -45,6 +48,7 @@ nav a {
     float: left;
 }
 main {
+    flex: 1;
     padding: 2rem;
 }
 .place-card, .review-card {
@@ -139,4 +143,82 @@ ul {
 
 #place-details h2 {
     text-align: center;
+}
+
+.submit-button {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #e3eb0e;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 10px; /* Optional: Add some space between the nav items */
+}
+
+#add-review {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add space between the form elements */
+    padding: 20px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between the label and the select box */
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .place-card {
+        flex: 1 1 calc(50% - 1rem); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .place-card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.place-card {
+    flex: 1 1 calc(33.333% - 1rem); /* 3 cards per row */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.place-card h3, .place-card p {
+    margin: 0;
+    padding: 0;
 }

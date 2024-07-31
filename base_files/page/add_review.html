@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Places</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <header>
     <img src="images/logo.png" alt="logo" class="logo">
     <nav>
@@ -9,6 +17,7 @@
     <form id="review-form">
         <label for="review-text">Your Review:</label>
         <textarea id="review-text" name="review-text" required></textarea>
+        <div class="rating">
         <label for="rating">Rating:</label>
         <select name="rating" id="rating">
             <option value="1">1 Star</option>
@@ -17,8 +26,8 @@
             <option value="4">4 Star</option>
             <option value="5">5 Star</option>
         </select>
-
-        <button type="submit">Submit Review</button>
+    </div>
+        <button type="submit" class="submit-button">Submit Review</button>
     </form>
 </section>
 <div>
