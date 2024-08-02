@@ -90,7 +90,64 @@ function displayPlaces(places) {
   });
 }
 
-function getPlaceIdFromURL() {
-  // Extract the place ID from window.location.search
-  // Your code here
+document.getElementById('country-filter').addEventListener('change', (event) => {
+  const selectedCountryCode = event.target.value;
+  filterPlaces(selectedCountryCode);
+});
+
+function filterPlaces(selectedCountryCode) {
+  const placeCards = document.querySelectorAll('.place-card');
+  placeCards.forEach(card => {
+    const countryCode = card.getAttribute('data-country-code');
+    if (countryCode === selectedCountryCode || selectedCountryCode === 'all') {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
 }
+
+async function fetchCountries() {
+  try {
+      const response = await fetch('/base_files/mock-api/data/countries.json');
+      if (response.ok) {
+          const countries = await response.json();
+          populateCountryFilter(countries);
+      } else {
+          console.error('Failed to load countries:', response.statusText);
+      }
+  } catch (error) {
+      console.error('Error:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const countryFilter = document.getElementById('country-filter');
+
+  const loadCountries = async () => {
+      try {
+          const response = await fetch('/base_files/mock-api/data/countries.json');
+          const countries = await response.json();
+          populateCountryFilter(countries);
+      } catch (error) {
+          console.error('Error :', error);
+      }
+  };
+
+  const populateCountryFilter = (countries) => {
+      const allOption = document.createElement('option');
+      allOption.value = 'all';
+      allOption.textContent = 'All';
+      countryFilter.appendChild(allOption);
+
+      countries.forEach(country => {
+          const option = document.createElement('option');
+          option.value = country.code; // Ensure the value is the country code
+          option.textContent = country.name;
+          countryFilter.appendChild(option);
+      });
+  };
+
+  loadCountries();
+  fetchPlaces(); // Ensure places are fetched and displayed on page load
+});
