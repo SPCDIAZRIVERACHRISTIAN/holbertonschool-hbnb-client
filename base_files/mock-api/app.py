@@ -1,32 +1,24 @@
 from uuid import uuid4
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from flask_cors import CORS
 import json
 
 
-app = Flask(__name__, static_folder='base_files/page')
+app = Flask(__name__)
 app.config.from_object('config.Config')
 
 jwt = JWTManager(app)
 CORS(app) # Enable CORS for all routes
 
-with open('base_files/mock-api/data/users.json') as f:
+with open('/home/christian/holbertonschool-hbnb-client/base_files/mock-api/data/users.json') as f:
     users = json.load(f)
 
-with open('base_files/mock-api/data/places.json') as f:
+with open('/home/christian/holbertonschool-hbnb-client/base_files/mock-api/data/places.json') as f:
     places = json.load(f)
 
 # In-memory storage for new reviews
 new_reviews = []
-
-users = [
-    {"id": 1, "email": "user@example.com", "password": "password123"}
-]
-
-@app.route('/', methods=['GET'])
-def serve_login_page():
-    return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/login', methods=['POST'])
 def login():
